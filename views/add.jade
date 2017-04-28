@@ -1,0 +1,17 @@
+extends layout
+block content
+    h3.field.regheader #{title}
+    form.regform(method='post')
+        p.mess #{message}
+        div.item
+            label.label(for='name') name
+            input(type='text',placeholder='input name',id='name',name='name')
+        div.item
+            label.label(for='phone') address
+            input(type='text',placeholder='input address',id='phone',name='phone')
+        div.item
+            label.label(for='address') phone
+            input(type='text',placeholder='input phone number',id='address',name='address')
+        div.item
+            label.label
+            input(type='submit' id='sub',name='sub' value='add')

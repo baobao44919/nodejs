@@ -8,14 +8,14 @@ block content
             if success&&user
                 h3.welcome #{success}，Welcom #{user} come to Manageaddress
             else if !success&&user
-                h3.welcome Welcome #{user} #{contact[0].name} #{contact[1].name}come to Manageaddress
+                h3.welcome Welcome #{user} come to Manageaddress
             else
                 h3.welcome Welcome to Manageaddress
             h3.tech Manageaddress is used to manage the contact
             p.btnlist
                 if user
                     a.login(href = '/logout') quit
-                    a.userlink(href = '/users/#{user}') 发表文章
+                    a.userlink(href = '/add') add
                 else
                     a.login(href = '/login') login
                     a.register(href = '/reg') register
@@ -33,4 +33,4 @@ block content
                                         td #{contact[i].phone}
                                         td #{contact[i].address}
                                         td  
-                                            a.login(href = '/del') delete
+                                            a.login(href = '/del/#{contact[i].id}') delete

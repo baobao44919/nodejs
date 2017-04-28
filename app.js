@@ -51,6 +51,7 @@ app.use(function(req,res,next){
     }
     if(user){
         res.locals.user=user.name;
+        res.locals.id=user.id;
     }
     next();
 });
